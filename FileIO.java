@@ -1,29 +1,18 @@
-package CodSoft;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
-    
 
+import java.util.Scanner;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.Set;
 
-public class FileIO {
+public class WordCounter {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
