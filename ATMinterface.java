@@ -1,5 +1,3 @@
-package CodSoft;
-
 import java.util.Scanner;
 
 public class ATMinterface {
@@ -45,62 +43,62 @@ public class ATMinterface {
 }
 
 class userAccount{
-	private float Balance;
-	
-	public userAccount(float initBalance) {
-		this.Balance = initBalance;
-	}
-	
-	public void deposit(float amount) {
-		if(amount>0) {
-			Balance += amount;
-			System.out.println("Deposit done!");
-			System.out.println("Updated Balance is: "+ Balance);
-		}else {
-			System.out.println("Please Enter amount!");
-		}
-	}
-	
-	public float getBalance() {
-		return Balance;
-	}
-	
-	public void withdraw(float amount) {
-		if(amount > 0 && amount <=Balance) {
-			Balance -= amount;
-			System.out.println("Withdrawal done!");
-			System.out.println("Updated Balance is: "+ Balance);
-		}
-	}
+    private float Balance;
+
+    public userAccount(float initBalance) {
+        this.Balance = initBalance;
+    }
+
+    public void deposit(float amount) {
+        if(amount>0) {
+            Balance += amount;
+            System.out.println("Deposit done!");
+            System.out.println("Updated Balance is: "+ Balance);
+        }else {
+            System.out.println("Please Enter amount!");
+        }
+    }
+
+    public float getBalance() {
+        return Balance;
+    }
+
+    public void withdraw(float amount) {
+        if(amount > 0 && amount <=Balance) {
+            Balance -= amount;
+            System.out.println("Withdrawal done!");
+            System.out.println("Updated Balance is: "+ Balance);
+        }
+    }
 }
 
 class ATM{
-	private userAccount user;
-	
-	public ATM(userAccount acc) {
-		this.user = acc;
-	}
-	
-	
-	public void Menu() {
-		System.out.println("Welcome!");
-		System.out.println("1. Deposit Money");
-		System.out.println("2. Withdraw Money");
-		System.out.println("3. Check Balance");
-		System.out.println("4. EXIT");
-	}
-	
-	
-	public void Balance() {
-		System.out.println("Current Balance: "+ user.getBalance());
-	}
-	
-	public void withdraw(float amount) {
-		user.withdraw(amount);
-	}
-	
-	public void deposit(float amount) {
-		user.deposit(amount);
-	}
+    private userAccount user;
+
+    public ATM(userAccount acc) {
+        this.user = acc;
+    }
+
+
+    public void Menu() {
+        System.out.println("Welcome!");
+        System.out.println("1. Deposit Money");
+        System.out.println("2. Withdraw Money");
+        System.out.println("3. Check Balance");
+        System.out.println("4. EXIT");
+    }
+
+
+    public void Balance() {
+        System.out.println("Current Balance: "+ user.getBalance());
+    }
+
+    public void withdraw(float amount) {
+        user.withdraw(amount);
+    }
+
+    public void deposit(float amount) {
+        user.deposit(amount);
+    }
 }
 
